@@ -32,61 +32,61 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importIpsaJsonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importMojangJsonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportIpsaJsonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importMojangJsonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportMojangJsonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.versionBox = new System.Windows.Forms.TextBox();
-            this.urlBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmdBefBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cmdAftBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.loggingBox = new System.Windows.Forms.TextBox();
-            this.joinServerCheck = new System.Windows.Forms.CheckBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.assetsFileSizeBox = new System.Windows.Forms.NumericUpDown();
+            this.assetsSizeBox = new System.Windows.Forms.NumericUpDown();
+            this.defResYBox = new System.Windows.Forms.NumericUpDown();
+            this.defResXBox = new System.Windows.Forms.NumericUpDown();
+            this.javaBox = new System.Windows.Forms.NumericUpDown();
+            this.sizeBox = new System.Windows.Forms.NumericUpDown();
+            this.assetsVirtCheck = new System.Windows.Forms.CheckBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.assetsUrlBox = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.assetsNameBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.classpathBox = new System.Windows.Forms.TextBox();
-            this.assetsNameBox = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.assetsUrlBox = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.joinServerCheck = new System.Windows.Forms.CheckBox();
+            this.loggingBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmdAftBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmdBefBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.urlBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.versionBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.libsDataGridView = new System.Windows.Forms.DataGridView();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.assetsVirtCheck = new System.Windows.Forms.CheckBox();
-            this.sizeBox = new System.Windows.Forms.NumericUpDown();
-            this.javaBox = new System.Windows.Forms.NumericUpDown();
-            this.defResXBox = new System.Windows.Forms.NumericUpDown();
-            this.defResYBox = new System.Windows.Forms.NumericUpDown();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.supplementDataGridView = new System.Windows.Forms.DataGridView();
-            this.assetsSizeBox = new System.Windows.Forms.NumericUpDown();
-            this.assetsFileSizeBox = new System.Windows.Forms.NumericUpDown();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.libsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.javaBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.defResXBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.defResYBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supplementDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assetsSizeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetsFileSizeBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetsSizeBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.defResYBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.defResXBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.javaBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sizeBox)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.libsDataGridView)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.supplementDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // gameBox
@@ -124,18 +124,19 @@
             this.importIpsaJsonToolStripMenuItem.Text = "Import IpsaJson";
             this.importIpsaJsonToolStripMenuItem.Click += new System.EventHandler(this.importIpsaJsonToolStripMenuItem_Click);
             // 
-            // importMojangJsonToolStripMenuItem
-            // 
-            this.importMojangJsonToolStripMenuItem.Name = "importMojangJsonToolStripMenuItem";
-            this.importMojangJsonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.importMojangJsonToolStripMenuItem.Text = "Import MojangJson";
-            // 
             // exportIpsaJsonToolStripMenuItem
             // 
             this.exportIpsaJsonToolStripMenuItem.Name = "exportIpsaJsonToolStripMenuItem";
             this.exportIpsaJsonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportIpsaJsonToolStripMenuItem.Text = "Export IpsaJson";
             this.exportIpsaJsonToolStripMenuItem.Click += new System.EventHandler(this.exportIpsaJsonToolStripMenuItem_Click);
+            // 
+            // importMojangJsonToolStripMenuItem
+            // 
+            this.importMojangJsonToolStripMenuItem.Name = "importMojangJsonToolStripMenuItem";
+            this.importMojangJsonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importMojangJsonToolStripMenuItem.Text = "Import MojangJson";
+            this.importMojangJsonToolStripMenuItem.Click += new System.EventHandler(this.importMojangJsonToolStripMenuItem_Click);
             // 
             // exportMojangJsonToolStripMenuItem
             // 
@@ -199,160 +200,124 @@
             this.tabPage1.Text = "Main";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // assetsFileSizeBox
             // 
-            this.tabPage2.Controls.Add(this.libsDataGridView);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 323);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Libraries";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.assetsFileSizeBox.Location = new System.Drawing.Point(536, 85);
+            this.assetsFileSizeBox.Name = "assetsFileSizeBox";
+            this.assetsFileSizeBox.Size = new System.Drawing.Size(250, 20);
+            this.assetsFileSizeBox.TabIndex = 41;
             // 
-            // tabPage3
+            // assetsSizeBox
             // 
-            this.tabPage3.Controls.Add(this.supplementDataGridView);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(792, 323);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Supplement";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.assetsSizeBox.Location = new System.Drawing.Point(536, 58);
+            this.assetsSizeBox.Name = "assetsSizeBox";
+            this.assetsSizeBox.Size = new System.Drawing.Size(250, 20);
+            this.assetsSizeBox.TabIndex = 40;
             // 
-            // label1
+            // defResYBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Game name";
+            this.defResYBox.Location = new System.Drawing.Point(276, 188);
+            this.defResYBox.Name = "defResYBox";
+            this.defResYBox.Size = new System.Drawing.Size(114, 20);
+            this.defResYBox.TabIndex = 39;
             // 
-            // label2
+            // defResXBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Version";
+            this.defResXBox.Location = new System.Drawing.Point(140, 188);
+            this.defResXBox.Name = "defResXBox";
+            this.defResXBox.Size = new System.Drawing.Size(114, 20);
+            this.defResXBox.TabIndex = 38;
             // 
-            // versionBox
+            // javaBox
             // 
-            this.versionBox.Location = new System.Drawing.Point(140, 32);
-            this.versionBox.Name = "versionBox";
-            this.versionBox.Size = new System.Drawing.Size(250, 20);
-            this.versionBox.TabIndex = 3;
+            this.javaBox.Location = new System.Drawing.Point(141, 110);
+            this.javaBox.Name = "javaBox";
+            this.javaBox.Size = new System.Drawing.Size(250, 20);
+            this.javaBox.TabIndex = 37;
             // 
-            // urlBox
+            // sizeBox
             // 
-            this.urlBox.Location = new System.Drawing.Point(140, 58);
-            this.urlBox.Name = "urlBox";
-            this.urlBox.Size = new System.Drawing.Size(250, 20);
-            this.urlBox.TabIndex = 5;
+            this.sizeBox.Location = new System.Drawing.Point(140, 84);
+            this.sizeBox.Name = "sizeBox";
+            this.sizeBox.Size = new System.Drawing.Size(250, 20);
+            this.sizeBox.TabIndex = 36;
             // 
-            // label3
+            // assetsVirtCheck
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 61);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Client URL";
+            this.assetsVirtCheck.AutoSize = true;
+            this.assetsVirtCheck.Location = new System.Drawing.Point(140, 243);
+            this.assetsVirtCheck.Name = "assetsVirtCheck";
+            this.assetsVirtCheck.Size = new System.Drawing.Size(15, 14);
+            this.assetsVirtCheck.TabIndex = 35;
+            this.assetsVirtCheck.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // label17
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 87);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Client Size";
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(7, 243);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(132, 13);
+            this.label17.TabIndex = 34;
+            this.label17.Text = "Virtual assets (deprecated)";
             // 
-            // label5
+            // label16
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 113);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Minimal Java version";
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(259, 191);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(12, 13);
+            this.label16.TabIndex = 32;
+            this.label16.Text = "x";
             // 
-            // cmdBefBox
+            // label15
             // 
-            this.cmdBefBox.Location = new System.Drawing.Point(140, 136);
-            this.cmdBefBox.Name = "cmdBefBox";
-            this.cmdBefBox.Size = new System.Drawing.Size(250, 20);
-            this.cmdBefBox.TabIndex = 11;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(397, 87);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(75, 13);
+            this.label15.TabIndex = 30;
+            this.label15.Text = "Assets file size";
             // 
-            // label6
+            // label14
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 139);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "CmdBef (jvm)";
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(397, 61);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(59, 13);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "Assets size";
             // 
-            // cmdAftBox
+            // label13
             // 
-            this.cmdAftBox.Location = new System.Drawing.Point(140, 162);
-            this.cmdAftBox.Name = "cmdAftBox";
-            this.cmdAftBox.Size = new System.Drawing.Size(250, 20);
-            this.cmdAftBox.TabIndex = 13;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(397, 35);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(63, 13);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "Assets URL";
             // 
-            // label7
+            // assetsUrlBox
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 165);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "CmdAft (game)";
+            this.assetsUrlBox.Location = new System.Drawing.Point(536, 32);
+            this.assetsUrlBox.Name = "assetsUrlBox";
+            this.assetsUrlBox.Size = new System.Drawing.Size(250, 20);
+            this.assetsUrlBox.TabIndex = 25;
             // 
-            // label8
+            // label12
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 191);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Default resolution";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(397, 9);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(67, 13);
+            this.label12.TabIndex = 24;
+            this.label12.Text = "Assets name";
             // 
-            // label9
+            // assetsNameBox
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 217);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 13);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Join server popup";
-            // 
-            // loggingBox
-            // 
-            this.loggingBox.Location = new System.Drawing.Point(140, 266);
-            this.loggingBox.Name = "loggingBox";
-            this.loggingBox.Size = new System.Drawing.Size(250, 20);
-            this.loggingBox.TabIndex = 18;
-            // 
-            // joinServerCheck
-            // 
-            this.joinServerCheck.AutoSize = true;
-            this.joinServerCheck.Location = new System.Drawing.Point(140, 217);
-            this.joinServerCheck.Name = "joinServerCheck";
-            this.joinServerCheck.Size = new System.Drawing.Size(15, 14);
-            this.joinServerCheck.TabIndex = 19;
-            this.joinServerCheck.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 269);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 13);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Log4j config URL";
+            this.assetsNameBox.Location = new System.Drawing.Point(536, 6);
+            this.assetsNameBox.Name = "assetsNameBox";
+            this.assetsNameBox.Size = new System.Drawing.Size(250, 20);
+            this.assetsNameBox.TabIndex = 23;
             // 
             // label11
             // 
@@ -370,55 +335,150 @@
             this.classpathBox.Size = new System.Drawing.Size(250, 20);
             this.classpathBox.TabIndex = 21;
             // 
-            // assetsNameBox
+            // label10
             // 
-            this.assetsNameBox.Location = new System.Drawing.Point(536, 6);
-            this.assetsNameBox.Name = "assetsNameBox";
-            this.assetsNameBox.Size = new System.Drawing.Size(250, 20);
-            this.assetsNameBox.TabIndex = 23;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(7, 269);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(90, 13);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Log4j config URL";
             // 
-            // label12
+            // joinServerCheck
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(397, 9);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 13);
-            this.label12.TabIndex = 24;
-            this.label12.Text = "Assets name";
+            this.joinServerCheck.AutoSize = true;
+            this.joinServerCheck.Location = new System.Drawing.Point(140, 217);
+            this.joinServerCheck.Name = "joinServerCheck";
+            this.joinServerCheck.Size = new System.Drawing.Size(15, 14);
+            this.joinServerCheck.TabIndex = 19;
+            this.joinServerCheck.UseVisualStyleBackColor = true;
             // 
-            // assetsUrlBox
+            // loggingBox
             // 
-            this.assetsUrlBox.Location = new System.Drawing.Point(536, 32);
-            this.assetsUrlBox.Name = "assetsUrlBox";
-            this.assetsUrlBox.Size = new System.Drawing.Size(250, 20);
-            this.assetsUrlBox.TabIndex = 25;
+            this.loggingBox.Location = new System.Drawing.Point(140, 266);
+            this.loggingBox.Name = "loggingBox";
+            this.loggingBox.Size = new System.Drawing.Size(250, 20);
+            this.loggingBox.TabIndex = 18;
             // 
-            // label13
+            // label9
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(397, 35);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 13);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "Assets URL";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 217);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 13);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Join server popup";
             // 
-            // label14
+            // label8
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(397, 61);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 13);
-            this.label14.TabIndex = 29;
-            this.label14.Text = "Assets size";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 191);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Default resolution";
             // 
-            // label15
+            // cmdAftBox
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(397, 87);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(75, 13);
-            this.label15.TabIndex = 30;
-            this.label15.Text = "Assets file size";
+            this.cmdAftBox.Location = new System.Drawing.Point(140, 162);
+            this.cmdAftBox.Name = "cmdAftBox";
+            this.cmdAftBox.Size = new System.Drawing.Size(250, 20);
+            this.cmdAftBox.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 165);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 13);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "CmdAft (game)";
+            // 
+            // cmdBefBox
+            // 
+            this.cmdBefBox.Location = new System.Drawing.Point(140, 136);
+            this.cmdBefBox.Name = "cmdBefBox";
+            this.cmdBefBox.Size = new System.Drawing.Size(250, 20);
+            this.cmdBefBox.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 139);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "CmdBef (jvm)";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(8, 113);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Minimal Java version";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Client Size";
+            // 
+            // urlBox
+            // 
+            this.urlBox.Location = new System.Drawing.Point(140, 58);
+            this.urlBox.Name = "urlBox";
+            this.urlBox.Size = new System.Drawing.Size(250, 20);
+            this.urlBox.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 61);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Client URL";
+            // 
+            // versionBox
+            // 
+            this.versionBox.Location = new System.Drawing.Point(140, 32);
+            this.versionBox.Name = "versionBox";
+            this.versionBox.Size = new System.Drawing.Size(250, 20);
+            this.versionBox.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Version";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Game name";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.libsDataGridView);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(792, 323);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Libraries";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // libsDataGridView
             // 
@@ -429,60 +489,15 @@
             this.libsDataGridView.Size = new System.Drawing.Size(786, 317);
             this.libsDataGridView.TabIndex = 0;
             // 
-            // label16
+            // tabPage3
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(259, 191);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(12, 13);
-            this.label16.TabIndex = 32;
-            this.label16.Text = "x";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(7, 243);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(132, 13);
-            this.label17.TabIndex = 34;
-            this.label17.Text = "Virtual assets (deprecated)";
-            // 
-            // assetsVirtCheck
-            // 
-            this.assetsVirtCheck.AutoSize = true;
-            this.assetsVirtCheck.Location = new System.Drawing.Point(140, 243);
-            this.assetsVirtCheck.Name = "assetsVirtCheck";
-            this.assetsVirtCheck.Size = new System.Drawing.Size(15, 14);
-            this.assetsVirtCheck.TabIndex = 35;
-            this.assetsVirtCheck.UseVisualStyleBackColor = true;
-            // 
-            // sizeBox
-            // 
-            this.sizeBox.Location = new System.Drawing.Point(140, 84);
-            this.sizeBox.Name = "sizeBox";
-            this.sizeBox.Size = new System.Drawing.Size(250, 20);
-            this.sizeBox.TabIndex = 36;
-            // 
-            // javaBox
-            // 
-            this.javaBox.Location = new System.Drawing.Point(141, 110);
-            this.javaBox.Name = "javaBox";
-            this.javaBox.Size = new System.Drawing.Size(250, 20);
-            this.javaBox.TabIndex = 37;
-            // 
-            // defResXBox
-            // 
-            this.defResXBox.Location = new System.Drawing.Point(140, 188);
-            this.defResXBox.Name = "defResXBox";
-            this.defResXBox.Size = new System.Drawing.Size(114, 20);
-            this.defResXBox.TabIndex = 38;
-            // 
-            // defResYBox
-            // 
-            this.defResYBox.Location = new System.Drawing.Point(276, 188);
-            this.defResYBox.Name = "defResYBox";
-            this.defResYBox.Size = new System.Drawing.Size(114, 20);
-            this.defResYBox.TabIndex = 39;
+            this.tabPage3.Controls.Add(this.supplementDataGridView);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(792, 323);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Supplement";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // supplementDataGridView
             // 
@@ -492,20 +507,6 @@
             this.supplementDataGridView.Name = "supplementDataGridView";
             this.supplementDataGridView.Size = new System.Drawing.Size(792, 323);
             this.supplementDataGridView.TabIndex = 0;
-            // 
-            // assetsSizeBox
-            // 
-            this.assetsSizeBox.Location = new System.Drawing.Point(536, 58);
-            this.assetsSizeBox.Name = "assetsSizeBox";
-            this.assetsSizeBox.Size = new System.Drawing.Size(250, 20);
-            this.assetsSizeBox.TabIndex = 40;
-            // 
-            // assetsFileSizeBox
-            // 
-            this.assetsFileSizeBox.Location = new System.Drawing.Point(536, 85);
-            this.assetsFileSizeBox.Name = "assetsFileSizeBox";
-            this.assetsFileSizeBox.Size = new System.Drawing.Size(250, 20);
-            this.assetsFileSizeBox.TabIndex = 41;
             // 
             // Form1
             // 
@@ -522,16 +523,16 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.libsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.javaBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.defResXBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.defResYBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supplementDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.assetsSizeBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.assetsFileSizeBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetsSizeBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.defResYBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.defResXBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.javaBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sizeBox)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.libsDataGridView)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.supplementDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
