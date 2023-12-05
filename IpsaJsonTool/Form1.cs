@@ -115,8 +115,6 @@ namespace IpsaJsonTool
 
             IpsaJson ij = new IpsaJson();
 
-            //DataTable libs = ((DataRowView)libsDataGridView.Rows[0].DataBoundItem).DataView.Table;
-
             //DataTable supplement = ((DataRowView)supplementDataGridView.Rows[0].DataBoundItem).DataView.Table;
 
             ij.game = gameBox.Text;
@@ -139,8 +137,46 @@ namespace IpsaJsonTool
             ija.fileSize = (int)assetsFileSizeBox.Value;
             ij.assets = ija;
 
-            string output = JsonConvert.SerializeObject(ij);
-            File.WriteAllText(path, output);
+            if (libsDataGridView.Rows.Count > 1)
+            {
+                List<IpsaJsonLibraries> ijl = new List<IpsaJsonLibraries>();
+
+                DataTable libs = ((DataRowView)libsDataGridView.Rows[0].DataBoundItem).DataView.Table;
+
+                for (int row = 0; row < libs.Rows.Count; row++)
+                {
+                    IpsaJsonLibraries newOne = new IpsaJsonLibraries();
+                    for (int col = 0; col < libs.Columns.Count; col++)
+                    {
+                        if (col == 0)
+                            newOne.name = libs.Rows[row][col].ToString();
+                        else if (col == 1)
+                            newOne.url = libs.Rows[row][col].ToString();
+                        else if (col == 2)
+                            newOne.size = (int.Parse(libs.Rows[row][col].ToString()));
+                        else if (col == 3)
+                            newOne.extract = (bool.Parse(libs.Rows[row][col].ToString()));
+
+                        Debug.WriteLine($"{col} {row}:  {libs.Rows[row][col]}");
+                    }
+                    ijl.Add(newOne);
+                }
+                ij.libraries = ijl.ToArray();
+
+                string output = JsonConvert.SerializeObject(ij);
+                File.WriteAllText(path, output);
+
+                //foreach (IpsaJsonLibraries lib in ij.libraries)
+                //{
+                //    libs.Rows.Add();
+                //    libs.Rows[libCol][0] = $"{lib.name}";
+                //    libs.Rows[libCol][1] = $"{lib.url}";
+                //    libs.Rows[libCol][2] = $"{lib.size}";
+                //    libs.Rows[libCol][3] = $"{lib.extract}";
+
+                //    libCol++;
+                //}
+            }
 
             //int libCol = 0;
             //foreach (IpsaJsonLibraries lib in ij.libraries)
