@@ -60,8 +60,6 @@
             this.assetsNameBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.assetsUrlBox = new System.Windows.Forms.TextBox();
-            this.assetsSizeBox = new System.Windows.Forms.TextBox();
-            this.assetsFileSizeBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -74,6 +72,8 @@
             this.defResXBox = new System.Windows.Forms.NumericUpDown();
             this.defResYBox = new System.Windows.Forms.NumericUpDown();
             this.supplementDataGridView = new System.Windows.Forms.DataGridView();
+            this.assetsSizeBox = new System.Windows.Forms.NumericUpDown();
+            this.assetsFileSizeBox = new System.Windows.Forms.NumericUpDown();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -85,6 +85,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.defResXBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.defResYBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supplementDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetsSizeBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetsFileSizeBox)).BeginInit();
             this.SuspendLayout();
             // 
             // gameBox
@@ -133,6 +135,7 @@
             this.exportIpsaJsonToolStripMenuItem.Name = "exportIpsaJsonToolStripMenuItem";
             this.exportIpsaJsonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportIpsaJsonToolStripMenuItem.Text = "Export IpsaJson";
+            this.exportIpsaJsonToolStripMenuItem.Click += new System.EventHandler(this.exportIpsaJsonToolStripMenuItem_Click);
             // 
             // exportMojangJsonToolStripMenuItem
             // 
@@ -154,6 +157,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.assetsFileSizeBox);
+            this.tabPage1.Controls.Add(this.assetsSizeBox);
             this.tabPage1.Controls.Add(this.defResYBox);
             this.tabPage1.Controls.Add(this.defResXBox);
             this.tabPage1.Controls.Add(this.javaBox);
@@ -164,8 +169,6 @@
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.assetsFileSizeBox);
-            this.tabPage1.Controls.Add(this.assetsSizeBox);
             this.tabPage1.Controls.Add(this.assetsUrlBox);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.assetsNameBox);
@@ -390,20 +393,6 @@
             this.assetsUrlBox.Size = new System.Drawing.Size(250, 20);
             this.assetsUrlBox.TabIndex = 25;
             // 
-            // assetsSizeBox
-            // 
-            this.assetsSizeBox.Location = new System.Drawing.Point(536, 58);
-            this.assetsSizeBox.Name = "assetsSizeBox";
-            this.assetsSizeBox.Size = new System.Drawing.Size(250, 20);
-            this.assetsSizeBox.TabIndex = 26;
-            // 
-            // assetsFileSizeBox
-            // 
-            this.assetsFileSizeBox.Location = new System.Drawing.Point(536, 84);
-            this.assetsFileSizeBox.Name = "assetsFileSizeBox";
-            this.assetsFileSizeBox.Size = new System.Drawing.Size(250, 20);
-            this.assetsFileSizeBox.TabIndex = 27;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -504,6 +493,20 @@
             this.supplementDataGridView.Size = new System.Drawing.Size(792, 323);
             this.supplementDataGridView.TabIndex = 0;
             // 
+            // assetsSizeBox
+            // 
+            this.assetsSizeBox.Location = new System.Drawing.Point(536, 58);
+            this.assetsSizeBox.Name = "assetsSizeBox";
+            this.assetsSizeBox.Size = new System.Drawing.Size(250, 20);
+            this.assetsSizeBox.TabIndex = 40;
+            // 
+            // assetsFileSizeBox
+            // 
+            this.assetsFileSizeBox.Location = new System.Drawing.Point(536, 85);
+            this.assetsFileSizeBox.Name = "assetsFileSizeBox";
+            this.assetsFileSizeBox.Size = new System.Drawing.Size(250, 20);
+            this.assetsFileSizeBox.TabIndex = 41;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,6 +530,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.defResXBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.defResYBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.supplementDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetsSizeBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assetsFileSizeBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -568,8 +573,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox assetsFileSizeBox;
-        private System.Windows.Forms.TextBox assetsSizeBox;
         private System.Windows.Forms.TextBox assetsUrlBox;
         private System.Windows.Forms.DataGridView libsDataGridView;
         private System.Windows.Forms.Label label16;
@@ -580,6 +583,8 @@
         private System.Windows.Forms.NumericUpDown defResXBox;
         private System.Windows.Forms.NumericUpDown defResYBox;
         private System.Windows.Forms.DataGridView supplementDataGridView;
+        private System.Windows.Forms.NumericUpDown assetsFileSizeBox;
+        private System.Windows.Forms.NumericUpDown assetsSizeBox;
     }
 }
 

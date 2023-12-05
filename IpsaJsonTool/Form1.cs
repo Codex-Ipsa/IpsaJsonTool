@@ -53,7 +53,7 @@ namespace IpsaJsonTool
             versionBox.Text = ij.version;
             urlBox.Text = ij.url;
             sizeBox.Value = ij.size;
-            javaBox.Text = ij.java.ToString();
+            javaBox.Value = ij.java;
             cmdAftBox.Text = ij.cmdAft;
             cmdBefBox.Text = ij.cmdBef;
             defResXBox.Value = decimal.Parse(defRes[0]);
@@ -65,24 +65,27 @@ namespace IpsaJsonTool
 
             assetsNameBox.Text = ij.assets.name;
             assetsUrlBox.Text = ij.assets.url;
-            assetsSizeBox.Text = ij.assets.size.ToString();
-            assetsFileSizeBox.Text = ij.assets.fileSize.ToString();
+            assetsSizeBox.Value = ij.assets.size;
+            assetsFileSizeBox.Value = ij.assets.fileSize;
 
-            int libCol = 0;
-            foreach (IpsaJsonLibraries lib in ij.libraries)
+            if (ij.libraries != null)
             {
-                libs.Rows.Add();
-                libs.Rows[libCol][0] = $"{lib.name}";
-                libs.Rows[libCol][1] = $"{lib.url}";
-                libs.Rows[libCol][2] = $"{lib.size}";
-                libs.Rows[libCol][3] = $"{lib.extract}";
+                int libCol = 0;
+                foreach (IpsaJsonLibraries lib in ij.libraries)
+                {
+                    libs.Rows.Add();
+                    libs.Rows[libCol][0] = $"{lib.name}";
+                    libs.Rows[libCol][1] = $"{lib.url}";
+                    libs.Rows[libCol][2] = $"{lib.size}";
+                    libs.Rows[libCol][3] = $"{lib.extract}";
 
-                libCol++;
+                    libCol++;
+                }
+                libsDataGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                libsDataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                libsDataGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                libsDataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
-            libsDataGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            libsDataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            libsDataGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            libsDataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             if (ij.supplement != null)
             {
@@ -105,6 +108,77 @@ namespace IpsaJsonTool
             }
         }
 
+        public void ExportIpsa(string path)
+        {
+            //Debug.WriteLine(path);
+            //string jsonText = File.ReadAllText(path);
+
+            IpsaJson ij = new IpsaJson();
+
+            //DataTable libs = ((DataRowView)libsDataGridView.Rows[0].DataBoundItem).DataView.Table;
+
+            //DataTable supplement = ((DataRowView)supplementDataGridView.Rows[0].DataBoundItem).DataView.Table;
+
+            ij.game = gameBox.Text;
+            ij.version = versionBox.Text;
+            ij.url = urlBox.Text;
+            ij.size = (int)sizeBox.Value;
+            ij.java = (int)javaBox.Value;
+            ij.cmdAft = cmdAftBox.Text;
+            ij.cmdBef = cmdBefBox.Text;
+            ij.defRes = $"{defResXBox.Value} {defResYBox.Value}";
+            ij.srvJoin = joinServerCheck.Checked;
+            //ij.assetsVirt = assetsVirtCheck.Checked; //todo some shit with this because deprecated
+            ij.logging = loggingBox.Text;
+            ij.classpath = classpathBox.Text;
+
+            IpsaJsonAssets ija = new IpsaJsonAssets();
+            ija.name = assetsNameBox.Text;
+            ija.url = assetsUrlBox.Text;
+            ija.size = (int)assetsSizeBox.Value;
+            ija.fileSize = (int)assetsFileSizeBox.Value;
+            ij.assets = ija;
+
+            string output = JsonConvert.SerializeObject(ij);
+            File.WriteAllText(path, output);
+
+            //int libCol = 0;
+            //foreach (IpsaJsonLibraries lib in ij.libraries)
+            //{
+            //    libs.Rows.Add();
+            //    libs.Rows[libCol][0] = $"{lib.name}";
+            //    libs.Rows[libCol][1] = $"{lib.url}";
+            //    libs.Rows[libCol][2] = $"{lib.size}";
+            //    libs.Rows[libCol][3] = $"{lib.extract}";
+
+            //    libCol++;
+            //}
+            //libsDataGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            //libsDataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            //libsDataGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            //libsDataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            //if (ij.supplement != null)
+            //{
+            //    int supCol = 0;
+            //    foreach (IpsaJsonSupplement sup in ij.supplement)
+            //    {
+            //        supplement.Rows.Add();
+            //        supplement.Rows[supCol][0] = $"{sup.name}"; //2 (orig pos in json, shouldn't really matter anyways)
+            //        supplement.Rows[supCol][1] = $"{sup.path}"; //1
+            //        supplement.Rows[supCol][2] = $"{sup.url}"; //0
+            //        supplement.Rows[supCol][3] = $"{sup.renew}"; //3
+
+            //        supCol++;
+            //    }
+
+            //    supplementDataGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            //    supplementDataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            //    supplementDataGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            //    supplementDataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //}
+        }
+
         private void importIpsaJsonToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -112,6 +186,16 @@ namespace IpsaJsonTool
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 ImportIpsa(dialog.FileName);
+            }
+        }
+
+        private void exportIpsaJsonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = ".JSON files|*.json";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                ExportIpsa(dialog.FileName);
             }
         }
     }
