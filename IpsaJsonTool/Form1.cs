@@ -48,6 +48,8 @@ namespace IpsaJsonTool
             string[] defRes = ij.defRes.Split(' ');
             defResXBox.Maximum = 1920;
             defResYBox.Maximum = 1080;
+            assetsSizeBox.Maximum = decimal.MaxValue;
+            assetsFileSizeBox.Maximum = decimal.MaxValue;
 
             gameBox.Text = ij.game;
             versionBox.Text = ij.version;
@@ -163,9 +165,48 @@ namespace IpsaJsonTool
                 }
                 ij.libraries = ijl.ToArray();
 
-                string output = JsonConvert.SerializeObject(ij);
-                File.WriteAllText(path, output);
+                if (supplementDataGridView.Rows.Count > 1)
+                {
+                    List<IpsaJsonSupplement> ijs = new List<IpsaJsonSupplement>();
 
+                    DataTable supplement = ((DataRowView)supplementDataGridView.Rows[0].DataBoundItem).DataView.Table;
+
+                    for (int row = 0; row < supplement.Rows.Count; row++)
+                    {
+                        IpsaJsonSupplement newOne = new IpsaJsonSupplement();
+                        for (int col = 0; col < supplement.Columns.Count; col++)
+                        {
+                            if (col == 0)
+                                newOne.name = supplement.Rows[row][col].ToString();
+                            else if (col == 1)
+                                newOne.path = supplement.Rows[row][col].ToString();
+                            else if (col == 2)
+                                newOne.url = supplement.Rows[row][col].ToString();
+                            else if (col == 3)
+                                newOne.renew = (bool.Parse(supplement.Rows[row][col].ToString()));
+
+                            Debug.WriteLine($"{col} {row}:  {supplement.Rows[row][col]}");
+                        }
+                        ijs.Add(newOne);
+                    }
+                    ij.supplement = ijs.ToArray();
+
+                    string output = JsonConvert.SerializeObject(ij);
+                    File.WriteAllText(path, output);
+
+                    //foreach (IpsaJsonLibraries lib in ij.libraries)
+                    //{
+                    //    libs.Rows.Add();
+                    //    libs.Rows[libCol][0] = $"{lib.name}";
+                    //    libs.Rows[libCol][1] = $"{lib.url}";
+                    //    libs.Rows[libCol][2] = $"{lib.size}";
+                    //    libs.Rows[libCol][3] = $"{lib.extract}";
+
+                    //    libCol++;
+                    //}
+                }
+
+                //int libCol = 0;
                 //foreach (IpsaJsonLibraries lib in ij.libraries)
                 //{
                 //    libs.Rows.Add();
@@ -176,63 +217,50 @@ namespace IpsaJsonTool
 
                 //    libCol++;
                 //}
-            }
+                //libsDataGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                //libsDataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                //libsDataGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                //libsDataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-            //int libCol = 0;
-            //foreach (IpsaJsonLibraries lib in ij.libraries)
-            //{
-            //    libs.Rows.Add();
-            //    libs.Rows[libCol][0] = $"{lib.name}";
-            //    libs.Rows[libCol][1] = $"{lib.url}";
-            //    libs.Rows[libCol][2] = $"{lib.size}";
-            //    libs.Rows[libCol][3] = $"{lib.extract}";
+                //if (ij.supplement != null)
+                //{
+                //    int supCol = 0;
+                //    foreach (IpsaJsonSupplement sup in ij.supplement)
+                //    {
+                //        supplement.Rows.Add();
+                //        supplement.Rows[supCol][0] = $"{sup.name}"; //2 (orig pos in json, shouldn't really matter anyways)
+                //        supplement.Rows[supCol][1] = $"{sup.path}"; //1
+                //        supplement.Rows[supCol][2] = $"{sup.url}"; //0
+                //        supplement.Rows[supCol][3] = $"{sup.renew}"; //3
 
-            //    libCol++;
-            //}
-            //libsDataGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            //libsDataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            //libsDataGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            //libsDataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                //        supCol++;
+                //    }
 
-            //if (ij.supplement != null)
-            //{
-            //    int supCol = 0;
-            //    foreach (IpsaJsonSupplement sup in ij.supplement)
-            //    {
-            //        supplement.Rows.Add();
-            //        supplement.Rows[supCol][0] = $"{sup.name}"; //2 (orig pos in json, shouldn't really matter anyways)
-            //        supplement.Rows[supCol][1] = $"{sup.path}"; //1
-            //        supplement.Rows[supCol][2] = $"{sup.url}"; //0
-            //        supplement.Rows[supCol][3] = $"{sup.renew}"; //3
-
-            //        supCol++;
-            //    }
-
-            //    supplementDataGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            //    supplementDataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            //    supplementDataGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            //    supplementDataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            //}
-        }
-
-        private void importIpsaJsonToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = ".JSON files|*.json";
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                ImportIpsa(dialog.FileName);
+                //    supplementDataGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                //    supplementDataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                //    supplementDataGridView.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                //    supplementDataGridView.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                //}
             }
         }
-
-        private void exportIpsaJsonToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog dialog = new SaveFileDialog();
-            dialog.Filter = ".JSON files|*.json";
-            if (dialog.ShowDialog() == DialogResult.OK)
+            private void importIpsaJsonToolStripMenuItem_Click(object sender, EventArgs e)
             {
-                ExportIpsa(dialog.FileName);
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = ".JSON files|*.json";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    ImportIpsa(dialog.FileName);
+                }
+            }
+
+            private void exportIpsaJsonToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+                SaveFileDialog dialog = new SaveFileDialog();
+                dialog.Filter = ".JSON files|*.json";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    ExportIpsa(dialog.FileName);
+                }
             }
         }
     }
-}
