@@ -21,6 +21,7 @@ namespace IpsaJsonTool.ipsajson
         public string cmdAft { get; set; }
         public string defRes { get; set; }
         public bool srvJoin { get; set; }
+        public bool assetsVirt { get; set; } // deprecated
         public IpsaJsonAssets assets { get; set; }
         public string logging { get; set; }
         public string classpath { get; set; }
@@ -48,7 +49,7 @@ namespace IpsaJsonTool.ipsajson
     {
         public string url { get; set; }
         public string path { get; set; }
-        public int name { get; set; }
+        public string name { get; set; }
         public bool renew { get; set; }
     }
 }
